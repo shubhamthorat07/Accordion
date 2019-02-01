@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Project </title>
+    <link rel="stylesheet" type="text/css" href="ml.css">
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<h1> Welcome </h1>
+
+		
+		
+         <button class="accordion" type="button"> Sec1 </button>
+
+
+         <div class="panel">
+
+           <p> Hello World !
+
+            </p>
+
+         </div>
+
+         <button class="accordion" type="button"> Sec2 </button>
+
+         <div class="panel">
+
+           <p> Hello World !
+
+            </p>
+
+         </div>
+
+
+<button class="accordion" type="button"> Sec3 </button>
+
+         <div class="panel">
+
+           <p> Hello World !
+            </p>
+
+         </div>
+
+
+	</div>
+
+
+	<script>
+		
+		var acc = document.getElementsByClassName("accordion");
+
+		var i;
+
+		for(i = 0;i<acc.length; i++) {
+			acc[i].onclick = function(){
+				this.classList.toggle("active");
+
+				var panel = this.nextElementSibling;
+
+				if(panel.style.maxHeight){
+					panel.style.maxHeight = null;
+				}
+
+				else{
+
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>
